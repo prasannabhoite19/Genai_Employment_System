@@ -1,0 +1,12 @@
+flask
+requests
+pandas
+numpy
+scikit-learn
+spacy
+sentence-transformers
+faiss-cpu
+python-dotenv
+openai
+streamlit
+beautifulsoup
