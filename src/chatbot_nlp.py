@@ -18,7 +18,9 @@ def extract_job_inputs(text):
     returns (job_title, job_location)
 
     """
-    doc = nlp(text)
+    text_lower = text.lower()
+
+    doc = nlp(text_lower)
     job_title = None
     location = None
 
@@ -27,7 +29,7 @@ def extract_job_inputs(text):
         if ent.label_ == "GPE":  #Geopolitical Entity = location
             location = ent.text
 
-    text_lower = text.lower()
+    
     if not location:
         for city in known_locations:
             if city in text_lower:
