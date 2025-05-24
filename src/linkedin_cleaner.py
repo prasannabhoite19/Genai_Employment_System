@@ -10,7 +10,7 @@ def clean_jobs_from_links(csv_path="data/raw/jobs.csv", limit=10):
     df = pd.read_csv(csv_path)
     links = df["link"].dropna().unique().tolist()[:limit]
 
-    print(f"🧹 Cleaning {len(links)} job listings...")
+    print(f" Cleaning {len(links)} job listings...")
 
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
     driver.maximize_window()
@@ -35,7 +35,7 @@ def clean_jobs_from_links(csv_path="data/raw/jobs.csv", limit=10):
             job_links.append(link)
 
         except Exception as e:
-            print(f"⚠️ Error processing link: {link}\n{e}")
+            print(f" Error processing link: {link}\n{e}")
             continue
 
     driver.quit()
@@ -49,7 +49,7 @@ def clean_jobs_from_links(csv_path="data/raw/jobs.csv", limit=10):
 
     os.makedirs("data/processed", exist_ok=True)
     cleaned_df.to_csv("data/processed/cleaned_jobs.csv", index=False)
-    print("✅ Cleaned data saved to data/processed/cleaned_jobs.csv")
+    print("Cleaned data saved to data/processed/cleaned_jobs.csv")
 
     return cleaned_df
 

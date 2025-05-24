@@ -16,7 +16,7 @@ def scrape_linkedin_jobs(job_title, location, max_jobs=10):
     location = location.replace(" ", "%20")
     url = f"https://www.linkedin.com/jobs/search/?keywords={job_title}&location={location}"
 
-    print(f"🔍 Searching for '{job_title}' jobs in '{location}'")
+    print(f" Searching for '{job_title}' jobs in '{location}'")
     driver.get(url)
     time.sleep(5)
 
@@ -34,7 +34,7 @@ def scrape_linkedin_jobs(job_title, location, max_jobs=10):
             EC.presence_of_all_elements_located((By.XPATH, '//ul[@class="jobs-search__results-list"]/li'))
         )
     except:
-        print("⚠️ No job cards found.")
+        print(" No job cards found.")
         driver.quit()
         return pd.DataFrame()
 
@@ -50,7 +50,7 @@ def scrape_linkedin_jobs(job_title, location, max_jobs=10):
             locations.append(location)
             links.append(link)
         except Exception as e:
-            print(f"⚠️ Error parsing job {index + 1}: {e}")
+            print(f" Error parsing job {index + 1}: {e}")
             continue
 
     driver.quit()
@@ -64,7 +64,7 @@ def scrape_linkedin_jobs(job_title, location, max_jobs=10):
 
     os.makedirs("data/raw", exist_ok=True)
     df.to_csv("data/raw/jobs.csv", index=False)
-    print("✅ Job data saved to data/raw/jobs.csv")
+    print(" Job data saved to data/raw/jobs.csv")
 
     return df
 
