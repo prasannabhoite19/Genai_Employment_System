@@ -36,7 +36,7 @@ if st.button("Find Jobs") and user_input:
                     st.markdown(f"### {row['title']}")
                     st.markdown(f"**Company:** {row['company']}")
                     st.markdown(f"**Location:** {row['location']}")
-                    st.markdown(f"[🔗 View Job Posting]({row['link']})", unsafe_allow_html=True)
+                    st.markdown(f"[View Job Posting]({row['link']})", unsafe_allow_html=True)
                     st.markdown("---")
 
                 st.subheader("Recommended Cousrses")
