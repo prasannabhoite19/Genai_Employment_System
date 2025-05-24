@@ -14,7 +14,8 @@ def scrape_linkedin_jobs(job_title, location, max_jobs=10):
 
     job_title = job_title.replace(" ", "%20")
     location = location.replace(" ", "%20")
-    url = f"https://www.linkedin.com/jobs/search/?keywords={job_title}&location={location}"
+    url = f"https://www.linkedin.com/jobs/search/?keywords={job_title}&location={location}&f_TPR=r2592000"
+
 
     print(f" Searching for '{job_title}' jobs in '{location}'")
     driver.get(url)
