@@ -1,5 +1,6 @@
 pandas
 requests
+beautifulsoup4
 python-dotenv
 selenium
 webdriver-manager
@@ -11,4 +12,3 @@ streamlit
 #sentence-transformers
 #faiss-cpu
 #openai
-#beautifulsoup4
