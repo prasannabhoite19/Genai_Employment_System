@@ -26,7 +26,7 @@ if st.button("Find Jobs") and user_input:
             st.error("No job links found. Try a different query.")
         else:
             # Step 2: Clean job metadata from individual pages
-            cleaned_df = clean_jobs_from_links("data/raw/jobs.csv", limit=10)
+            cleaned_df = clean_jobs_from_links("data/raw/jobs.csv", limit=15)
 
             if cleaned_df.empty:
                 st.error("Could not extract job details. Try again later.")
@@ -39,7 +39,7 @@ if st.button("Find Jobs") and user_input:
                     st.markdown(f"[View Job Posting]({row['link']})", unsafe_allow_html=True)
                     st.markdown("---")
 
-                st.subheader("Recommended Cousrses")
+                st.subheader("Recommended Courses")
                 course_df = search_coursera_courses(job_title)
 
                 if not course_df.empty:

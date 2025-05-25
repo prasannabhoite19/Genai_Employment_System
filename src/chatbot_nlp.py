@@ -4,7 +4,7 @@ nlp = spacy.load('en_core_web_sm')
 
 job_keywords = [
     "data analyst", "data science", "software engineer", "developer", "AI"
-    "data scientist", "pharmacy", "pharmacist", "nurse", "manager", "designer"
+    "data scientist", "pharmacy", "pharmacist", "nurse", "manager", "designer", "java"
 ]
 
 known_locations = [

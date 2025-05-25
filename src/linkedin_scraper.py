@@ -4,12 +4,18 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.chrome.options import Options
 import pandas as pd
 import time
 import os
 
 def scrape_linkedin_jobs(job_title, location, max_jobs=10):
-    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+    
+    options = Options()
+    options.add_argument("--headless")
+    options.add_argument("--disable-gpu")
+
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
     driver.maximize_window()
 
     job_title = job_title.replace(" ", "%20")
