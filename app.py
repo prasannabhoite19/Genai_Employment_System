@@ -1,5 +1,5 @@
 import streamlit as st
-from src.chatbot_nlp import extract_job_inputs
+from src.gpt_nlp import extract_job_title_location_gpt
 from src.linkedin_scraper import scrape_linkedin_jobs
 from src.linkedin_cleaner import clean_jobs_from_links
 from src.course_scraper import search_coursera_courses
@@ -12,7 +12,11 @@ st.title("An Integrated Platform for Employment and Skill Development")
 user_input = st.text_input(" What kind of job are you looking for?", placeholder="e.g., Data analyst in Mumbai")
 
 if st.button("Find Jobs") and user_input:
-    job_title, location = extract_job_inputs(user_input)
+    job_title, location = extract_job_title_location_gpt(user_input)
+
+    if not job_title or not location:
+        st.warning("Could not understand your qurey. Please specify job title and location.")
+        st.stop()
 
     if "please specify" in job_title.lower():
         st.warning(job_title)

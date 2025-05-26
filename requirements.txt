@@ -6,9 +6,9 @@ selenium
 webdriver-manager
 spacy
 streamlit
+openai
 #flask
 #numpy
 #scikit-learn
 #sentence-transformers
 #faiss-cpu
-#openai
