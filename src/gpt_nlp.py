@@ -8,23 +8,20 @@ api_base = os.getenv('OPENAI_API_BASE')
 
 client = openai.OpenAI(api_key=api_key, base_url=api_base)
 
+
+
 def extract_job_title_location_gpt(user_input):
-    prompt = f""" 
-You are an intelligent assiant. Extract the job title and location from this user query :
-"{user_input}"
-
-Respond in this JSON format exactly:
-{{
-    "job_title" : "..."
-    "location" : "..."
-}}
-
-"""
-
+    prompt = f""" You are an intelligent assistant. Extract the job title and location from this user query: "{user_input}". 
+     Respond in this JSON format exactly:
+     {{
+        "job_title": "...",
+        "location": "..."
+     }}
+     """
     try:
         response = client.chat.completions.create(
             model = "gpt-4o-mini",
-            messages = [{"role": "user",  "context" : prompt}],
+            messages = [{"role": "user",  "content" : prompt}],
             temperature = 0
         )
 
@@ -35,7 +32,7 @@ Respond in this JSON format exactly:
 
         result = json.loads(message)
 
-        return result.get("job_title", "").strip(), result.get("location", "").strip()
+        return(result.get("job_title", "").strip(), result.get("location", "").strip())
 
     
     
@@ -46,5 +43,5 @@ Respond in this JSON format exactly:
 
 
 if __name__ == "__main__":
-    title, loc = extract_job_title_location_gpt("I want a data analyst internship in Bangalore")
-    print(title, loc)
+    title, loc = extract_job_title_location_gpt(user_input="I want a data analyst internship in Bangalore")
+    print(f"title : {title}, location : {loc}")
