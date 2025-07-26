@@ -1,6 +1,7 @@
 ## GenAI Employment System 
 An end-to-end AI-powered platform designed to assist job seekers by leveraging generative AI technologies like GPT, web scraping tools, and NLP models. The system can extract job-related data from LinkedIn, recommend courses, and provide overview about hiring company.
 
+
 ## 🚀 Features    
 
   * 🔍 LinkedIn Job Scraper: Automatically gathers job postings from LinkedIn.
@@ -12,6 +13,7 @@ An end-to-end AI-powered platform designed to assist job seekers by leveraging g
   * 📚 Course Recommendation Engine: Recommends courses to upgrade your skill using scraped course data.
   
   * 🔗 Integration with GPT APIs: For Summary generation and content assistance.
+
 
 ## 🛠️ Installation
 
@@ -41,11 +43,13 @@ An end-to-end AI-powered platform designed to assist job seekers by leveraging g
      
      OPENAI_API_KEY=your_openai_key
 
+
 ## ▶️ Running the Project
 
   1. Run Main App:
      
      streamlit run app.py
+
 
 ## 🤖 Usage
 
@@ -56,6 +60,7 @@ An end-to-end AI-powered platform designed to assist job seekers by leveraging g
   * The scraper pulls recent jobs from LinkedIn based on user input.
   
   * Course recommendations are made based on skills required for job.
+
 
 ## 📦 Dependencies
 
@@ -75,9 +80,11 @@ An end-to-end AI-powered platform designed to assist job seekers by leveraging g
 
 See requirements.txt for full list.
 
+
 ## 🤝 Contributing
 
 Feel free to fork the repo and submit pull requests. For major changes, please open an issue first to discuss what you’d like to change.
+
 
 ## 📄 License
 
