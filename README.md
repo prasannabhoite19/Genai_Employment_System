@@ -85,7 +85,3 @@ See requirements.txt for full list.
 
 Feel free to fork the repo and submit pull requests. For major changes, please open an issue first to discuss what you’d like to change.
 
-
-## 📄 License
-
-This project is open source and available under the MIT License.
