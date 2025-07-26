@@ -12,7 +12,7 @@ An end-to-end AI-powered platform designed to assist job seekers by leveraging g
   
   * 🔗 Integration with GPT APIs: For Summary generation and content assistance.
 
-🛠️ Installation
+## 🛠️ Installation
 
   1. Clone the Repository
      git clone https://github.com/prasannabhoite19/Genai_Employment_System.git
@@ -32,38 +32,38 @@ An end-to-end AI-powered platform designed to assist job seekers by leveraging g
      Create a .env file in the root directory with required API keys, e.g.:
      OPENAI_API_KEY=your_openai_key
 
-▶️ Running the Project
+## ▶️ Running the Project
   1. Run Main App
      streamlit run app.py
 
 🤖 Usage
-  Input your query about job title job location.
+  * Input your query about job title job location.
 
-  GPT gives overview about the company.
+  * GPT gives overview about the company.
   
-  The scraper pulls recent jobs from LinkedIn based on user input.
+  * The scraper pulls recent jobs from LinkedIn based on user input.
   
-  Course recommendations are made based on skills required for job.
+  * Course recommendations are made based on skills required for job.
 
-📦 Dependencies
-Key libraries used:
+## 📦 Dependencies
+ Key libraries used:
 
-  spaCy
+  * spaCy
   
-  openai
+  * openai
   
-  requests
+  * requests
   
-  beautifulsoup4
+  * beautifulsoup4
   
-  selenium
+  * selenium
   
-  python-dotenv
+  * python-dotenv
 
 See requirements.txt for full list.
 
-🤝 Contributing
+## 🤝 Contributing
 Feel free to fork the repo and submit pull requests. For major changes, please open an issue first to discuss what you’d like to change.
 
-📄 License
+## 📄 License
 This project is open source and available under the MIT License.
