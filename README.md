@@ -12,26 +12,6 @@ An end-to-end AI-powered platform designed to assist job seekers by leveraging g
   
   * 🔗 Integration with GPT APIs: For Summary generation and content assistance.
 
-## 🧱 Project Structure
-  Genai_Employment_System/
-    │
-    ├── app.py                   # Main application entry point
-    ├── chatbot_main.py          # To understand how it work without gpt
-    ├── .env                     # Environment variables (e.g., API keys)
-    ├── requirements.txt         # Python dependencies
-    ├── README.md                # Documentation file
-    │
-    ├── src/
-    │   ├── chatbot_nlp.py       # NLP logic for chatbot interactions
-    │   ├── course_scraper.py    # Web scraper for courses
-    │   ├── gpt_helper.py        # GPT API helper functions
-    │   ├── gpt_nlp.py           # GPT-based NLP logic
-    │   ├── linkedin_cleaner.py  # Cleans and preprocesses LinkedIn data
-    │   ├── linkedin_scraper.py  # Scrapes job listings from LinkedIn
-    │   └── __init__.py
-    │
-    └── data/                    # Folder for storing scraped and processed data
-
 🛠️ Installation
 
   1. Clone the Repository
