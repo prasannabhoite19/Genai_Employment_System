@@ -18,29 +18,33 @@ An end-to-end AI-powered platform designed to assist job seekers by leveraging g
   1. Clone the Repository:
 
      git clone https://github.com/prasannabhoite19/Genai_Employment_System.git
+     
      cd Genai_Employment_System
 
-  2. Create and Activate Virtual Environment: (Optional but recommended)
+  3. Create and Activate Virtual Environment: (Optional but recommended)
      
      python -m venv venv
+     
      source venv/bin/activate  # For Windows: venv\Scripts\activate
 
-  3. Install Dependencies:
+  5. Install Dependencies:
      
      pip install -r requirements.txt
 
-  4. Download spaCy Language Model:
+  6. Download spaCy Language Model:
      
      python -m spacy download en_core_web_sm
      
-  5. Set Up Environment Variables:
+  7. Set Up Environment Variables:
      
      Create a .env file in the root directory with required API keys, e.g.:
+     
      OPENAI_API_KEY=your_openai_key
 
 ## ▶️ Running the Project
 
-  1. Run Main App
+  1. Run Main App:
+     
      streamlit run app.py
 
 ## 🤖 Usage
