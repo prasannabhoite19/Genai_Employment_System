@@ -13,8 +13,7 @@ An end-to-end AI-powered platform designed to assist job seekers by leveraging g
   * 🔗 Integration with GPT APIs: For Summary generation and content assistance.
 
 ## 🛠️ Installation
-
-  1. Clone the Repository
+1. Clone the Repository
      git clone https://github.com/prasannabhoite19/Genai_Employment_System.git
      cd Genai_Employment_System
 
