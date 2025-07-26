@@ -1,4 +1,4 @@
-GenAI Employment System
+**GenAI Employment System**  
 An end-to-end AI-powered platform designed to assist job seekers by leveraging generative AI technologies like GPT, web scraping tools, and NLP models. The system can extract job-related data from LinkedIn, recommend courses, and provide overview about hiring company.
 
 🚀 Features
